@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda Online <i class="fas fa-shopping-cart"></i></h1>
+    </header>
+    <main class="content">
+<section class="products">
+    <h2><i class="fas fa-box"></i> Productos</h2>
+    <div class="product-filters">
+        <input type="text" id="search-input" placeholder="Buscar productos...">
+        <select id="sort-select">
+            <option value="name">Ordenar por nombre</option>
+            <option value="price">Ordenar por precio</option>
+        </select>
+    </div>
+    <div class="product-list"></div>
+</section>
+
+        <section class="cart">
+            <h2><i class="fas fa-shopping-cart"></i> Carrito</h2>
+            <div class="cart-items"></div>
+            <div class="cart-summary">
+                <p>Subtotal: <span class="cart-subtotal">MX$0.00</span></p>
+                <p>IVA (16%): <span class="cart-iva">MX$0.00</span></p>
+                <p>Total: <span class="cart-total">MX$0.00</span></p>
+                <div class="cart-buttons">
+                    <input type="text" id="coupon-input" placeholder="Cupón de descuento">
+                    <button class="apply-coupon"><i class="fas fa-tag"></i> Aplicar</button>
+                    <button class="clear-cart"><i class="fas fa-trash"></i> Vaciar Carrito</button>
+                    <button class="checkout"><i class="fas fa-check-circle"></i> Finalizar Compra</button>
+                </div>
+            </div>
+        </section>
+        <section class="favorites">
+            <h2><i class="fas fa-heart"></i> Favoritos</h2>
+            <div class="favorites-list"></div>
+        </section>
+        <section class="history">
+            <h2><i class="fas fa-history"></i> Historial de Compras</h2>
+            <div class="history-list"></div>
+        </section>
+        <section class="navigation-history">
+            <h2><i class="fas fa-history"></i> Historial de Navegación</h2>
+            <div class="navigation-history-list"></div>
+        </section>
+    </main>
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-details"></div>
+            <div class="product-reviews"></div>
+            <div class="product-suggestions"></div>
+        </div>
+    </div>
+    <div class="notification"></div>
+    <div class="chat-button"><i class="fas fa-comment-dots"></i></div>
+    <div class="chat-modal"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>
